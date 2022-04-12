@@ -33,7 +33,7 @@ class Page_scope(Base_pages):
     #取消新建角色
     mkdirname_cancel=(By.XPATH,'/html/body/div[2]/div/div[3]/div/button[1]/span')
     #判断是否创建成功
-    rule_new = ('//*[contains(text(),self.rule_name)]')  # -----判断
+    rule_new = (By.XPATH,'//*[contains(text(),self.rule_name)]')  # -----判断
     #搜索框输入新建的角色
     search_rulename=(By.XPATH,u'//*[@id="baseApp"]/div/div/div/div[1]/div[1]/div[1]/input')
     #选择新创建的角色
@@ -53,13 +53,13 @@ class Page_scope(Base_pages):
     #确认选择关联角色
     makesure_loadname=(By.XPATH,u'/html/body/div[3]/div/div[3]/div/button[2]/span')
     #判断角色是否关联成功
-    exist_relevance=('//*[@id="baseApp"]/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[1]/div[1]/div[3]/table/tbody/tr/td[1]/div')
+    exist_relevance=(By.XPATH,'//*[@id="baseApp"]/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[1]/div[1]/div[3]/table/tbody/tr/td[1]/div')
     #员工角色列表
     rule_list=(By.XPATH,u'//*[@id="baseApp"]/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[1]/div[1]/div[3]/table/tbody/tr/td[5]/div')
     #点击搜索按钮
     search_rule=(By.XPATH,u'//*[@id="baseApp"]/div/div/div/div[1]/div[1]/div[2]/div[1]/div/div/div/span')
     #权限移除按钮
-    scope_remove=('//*[contains(text(),"sunjianing")]/../../td[6]/div/div/button/span')
+    scope_remove=(By.XPATH,'//*[contains(text(),"sunjianing")]/../../td[6]/div/div/button/span')
     #确认移除权限按钮
     sure_delrulename=(By.XPATH,u'/html/body/div[5]/div/div[3]/div/button[2]/span')
     #验证删除其他权限
@@ -67,7 +67,7 @@ class Page_scope(Base_pages):
     #切换角色权限
     get_rule_scope=(By.XPATH,u'//*[@id="tab-2"]')
     #勾选所有功能权限
-    all_scope=('//*[@id="baseApp"]/div/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div/div[2]/div[3]/div/div[1]/div/label/span[1]/input')
+    all_scope=(By.XPATH,'//*[@id="baseApp"]/div/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div/div[2]/div[3]/div/div[1]/div/label/span[1]/input')
     #保存权限
     save_all_scope=(By.XPATH,u'/html/body/div[1]/div/div[3]/div[2]/div/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/button/span')
     #添加成功
@@ -154,7 +154,7 @@ class Scope_login(Base_pages):
 
 
     #系统中心-员工管理-查看
-    system_rule_view=('/html/body/div/div/div[3]/div[2]/div/div/div/div/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[2]/table[1]/tr/td[2]/table/tr[1]/td[1]/label/span[1]/input')
+    system_rule_view=(By.XPATH,'/html/body/div/div/div[3]/div[2]/div/div/div/div/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[2]/table[1]/tr/td[2]/table/tr[1]/td[1]/label/span[1]/input')
 
     def scope_login(self):
         self.sleep_wait(2)

@@ -34,7 +34,7 @@ class Base_pages(object):
             print("获取元素失败")
     #校验专用元素查询
     def Find_elements(self, elem):
-        return self.driver.find_element_by_xpath(elem)
+        return self.driver.find_element(elem)
 
     #输入框进行输入
     def input_send_keys(self,elem,text):
@@ -86,7 +86,7 @@ class Base_pages(object):
     def isloginsuccess(self,elem):
         flag=True
         try:
-            self.driver.find_element_by_xpath(elem)
+            self.driver.find_element(elem)
             print("登陆成功")
             return flag
         except:
@@ -95,7 +95,7 @@ class Base_pages(object):
             return flag
     #判断元素是否创建成功
     def mkdir_success(self,elem):
-        if self.driver.find_element_by_xpath(elem):
+        if self.driver.find_element(elem):
             print("创建成功")
         else:
             print("创建失败")

@@ -47,7 +47,7 @@ class login_EOMS(Base_pages):
     EOMS_enter_Login_element=(By.XPATH,u'//*[@id="form1"]/div[4]/a')
     #EOMS登陆后界面标题（判断是否登陆成功）
     EOMS_Login_title_element=(By.XPATH,u'//*[@id="logininfo"]')
-    EOMS_Login_title=('//*[@id="logininfo"]')      #-----判断
+    EOMS_Login_title=(By.XPATH,'//*[@id="logininfo"]')      #-----判断
 
     def __init__(self,driver,base_url):
         Base_pages.__init__(self,driver,base_url)
@@ -74,7 +74,7 @@ class login_LDW_new(Base_pages):
     #粮达网2.0运营平台主页登陆密码错误
     LDW_new2_login_error=(By.XPATH,u'/html/body/div[3]/p')
     #粮达网2.0运营平台主页logo（判断是否登陆成功）
-    LDW_new2_login_success=(u'/html/body/div/div/div[2]/div[1]/div[1]/div/ul/li[2]/span')     #-----判断
+    LDW_new2_login_success=(By.XPATH,u'/html/body/div/div/div[2]/div[1]/div[1]/div/ul/li[2]/span')     #-----判断
 
     def __init__(self,driver,base_url):
         Base_pages.__init__(self,driver,base_url)
