@@ -70,7 +70,7 @@ class login_LDW_new(Base_pages):
     #粮达网2.0运营中心主页密码输入框
     LDW_operation_user_psw=(By.XPATH,u'/html/body/div[1]/div/form/div[3]/div/div/input')
     #粮达网2.0运营中心主页登录
-    LDW_new2_login=(By.XPATH,u'/html/body/div[1]/div/form/button/span')
+    LDW_new2_login=(By.XPATH,u'//*[@id="mainApp"]/div/form/button/span')
     #粮达网2.0运营平台主页登陆密码错误
     LDW_new2_login_error=(By.XPATH,u'/html/body/div[3]/p')
     #粮达网2.0运营平台主页logo（判断是否登陆成功）
@@ -83,7 +83,7 @@ class login_LDW_new(Base_pages):
         self.driver.get(self.LDW_operation_url)                         #打开url
         self.input_send_keys(self.LDW_operation_user_name,user_name)    #输入账户
         self.input_send_keys(self.LDW_operation_user_psw,user_psw)      #输入密码
-        self.click(self.LDW_new2_login)                                 #点击登陆
+        self.js_click(self.LDW_new2_login)                                 #点击登陆
         self.sleep_wait(2)
         self.isloginsuccess(self.LDW_new2_login_success)                #判断是否登陆成功
 
