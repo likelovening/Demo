@@ -9,6 +9,7 @@ order=0
 import sys
 sys.path.append('/root/.jenkins/workspace/selenium')
 from LDW_Automate_POM.pages.element_Aloginpage import login_LDW_new
+from selenium.webdriver.chrome.options import Options
 from LDW_Automate_POM.pages.element_scope import Page_scope
 from selenium import webdriver
 import pytest
@@ -18,7 +19,9 @@ class Test_scope():
     LDW_new_psw = "123456A@"
     @pytest.fixture(scope='function', autouse=True)
     def begin(self):
-        self.driver = webdriver.Chrome()
+        chrome_options=Options()
+        chrome_options.add_argument("--headless")
+        self.driver = webdriver.Chrome(chrome_options=chrome_options)
         # yield
         # self.driver.quit()
     def test_scope_base(self):
