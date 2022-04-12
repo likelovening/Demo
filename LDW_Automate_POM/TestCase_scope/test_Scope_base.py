@@ -4,7 +4,7 @@
 _author_='Jianing'
 _date_=21/10/20
 _data_='初始化角色权限功能，创建新的角色并赋予全部权限'
-order=0
+order=01
 """
 import sys
 sys.path.append('/root/.jenkins/workspace/selenium')
