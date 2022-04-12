@@ -54,7 +54,7 @@ class Base_pages(object):
 
     #js元素点击
     def js_click(self,elem):
-        self.driver.execute_script("arguments[0].click();",self.Find_elements(elem))
+        self.driver.execute_script("arguments[0].click();",self.Find_element(elem))
 
     #获取界面文本
     def get_text(self,elem):
