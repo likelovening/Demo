@@ -21,6 +21,7 @@ class Test_scope():
     def begin(self):
         chrome_options=Options()
         chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--no-sandbox")
         self.driver = webdriver.Chrome(chrome_options=chrome_options)
         # yield
         # self.driver.quit()
