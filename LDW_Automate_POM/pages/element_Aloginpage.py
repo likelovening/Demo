@@ -70,7 +70,7 @@ class login_LDW_new(Base_pages):
     #粮达网2.0运营中心主页密码输入框
     LDW_operation_user_psw=(By.XPATH,u'/html/body/div[1]/div/form/div[3]/div/div/input')
     #粮达网2.0运营中心主页登录
-    LDW_new2_login=(By.XPATH,u'//*[@id="mainApp"]/div/form/button/span')
+    LDW_new2_login=(By.XPATH,'//*[contains(text(),"登录")]')
     #粮达网2.0运营平台主页登陆密码错误
     LDW_new2_login_error=(By.XPATH,u'/html/body/div[3]/p')
     #粮达网2.0运营平台主页logo（判断是否登陆成功）
