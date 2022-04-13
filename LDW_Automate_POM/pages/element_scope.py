@@ -158,9 +158,9 @@ class Scope_login(Base_pages):
 
     def scope_login(self):
         self.sleep_wait(2)
-        self.click(self.system_rule_view)  #点击取消员工管理-查看按钮
+        self.js_click(self.system_rule_view)  #点击取消员工管理-查看按钮
         if self.Find_elements(self.system_rule_view).is_selected():
-            self.click(self.system_rule_view)  # 点击取消员工管理-查看按钮
+            self.js_click(self.system_rule_view)  # 点击取消员工管理-查看按钮
             print("取消选择员工管理-查看")
         else:
             pass

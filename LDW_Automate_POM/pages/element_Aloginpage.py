@@ -10,6 +10,7 @@ sys.path.append('..')
 from selenium import webdriver
 from LDW_Automate_POM.pages.base import Base_pages
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 #登陆粮达网1.0
 class login_LDW_old(Base_pages):
     #粮达网主页url
@@ -80,6 +81,8 @@ class login_LDW_new(Base_pages):
         Base_pages.__init__(self,driver,base_url)
     #粮达网2.0运营平台登陆
     def login_ldw_new(self,user_name,user_psw):
+        chrome_options=Options()
+        chrome_options.add_argument('--headless')
         self.driver.get(self.LDW_operation_url)                         #打开url
         self.input_send_keys(self.LDW_operation_user_name,user_name)    #输入账户
         self.input_send_keys(self.LDW_operation_user_psw,user_psw)      #输入密码
