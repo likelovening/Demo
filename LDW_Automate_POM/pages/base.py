@@ -6,6 +6,9 @@ _date_=21/10/20
 _data_='二次封装selenium基类、获取EOMS验证码'
 """
 import sys
+
+from selenium.webdriver import ActionChains
+
 sys.path.append('..')
 import time
 from selenium.webdriver.support import expected_conditions as EC
@@ -58,6 +61,10 @@ class Base_pages(object):
     #元素点击
     def click(self,elem):
         self.Find_element(elem).click()
+
+    #A元素点击
+    def Aclick(self,elem):
+        ActionChains(self.driver).move_to_element(self.Find_element(elem)).click().perform()
 
     #js元素点击
     def js_click(self,elem):
