@@ -89,8 +89,7 @@ class login_LDW_new(Base_pages):
         self.driver.get(self.LDW_operation_url)                         #打开url
         self.input_send_keys(self.LDW_operation_user_name,user_name)    #输入账户
         self.input_send_keys(self.LDW_operation_user_psw,user_psw)      #输入密码
-        self.LDW_new2_login1=Base_pages.Find_element(self.LDW_new2_login)
-        ActionChains(self.driver).move_to_element(self.LDW_new2_login1).click().perform()
+        ActionChains(self.driver).move_to_element(self.Find_element(self.LDW_new2_login)).click().perform()
         #self.js_click(self.LDW_new2_login)                                 #点击登陆
         self.sleep_wait(2)
         self.isloginsuccess(self.LDW_new2_login_success)                #判断是否登陆成功
