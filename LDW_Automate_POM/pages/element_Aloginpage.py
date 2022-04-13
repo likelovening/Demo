@@ -86,9 +86,9 @@ class login_LDW_new(Base_pages):
         self.driver.get(self.LDW_operation_url)                         #打开url
         self.input_send_keys(self.LDW_operation_user_name,user_name)    #输入账户
         self.input_send_keys(self.LDW_operation_user_psw,user_psw)      #输入密码
-        self.sleep_wait(2)
+        self.sleep_wait(5)
         self.Aclick(self.LDW_new2_login)                                 #点击登陆
-        self.sleep_wait(2)
+        self.sleep_wait(20)
         self.isloginsuccess(self.LDW_new2_login_success)                #判断是否登陆成功
 
 
