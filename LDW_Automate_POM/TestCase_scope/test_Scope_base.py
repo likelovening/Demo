@@ -25,8 +25,9 @@ class Test_scope():
         chrome_options.add_argument("window-size=1920x1080")
         chrome_options.add_argument("--disable-gpu")
         self.driver = webdriver.Chrome(options=chrome_options)
-        # yield
-        # self.driver.quit()
+        self.driver = webdriver.Chrome()
+        self.driver.implicitly_wait(10)
+        # self.driver.maximize_window()
     def test_scope_base(self):
         #实例化登陆
        loginin_LDW_new= login_LDW_new(self.driver,self.LDW_new_url)

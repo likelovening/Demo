@@ -429,7 +429,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 29-Mar-2022 at 13:54:42 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 14-Apr-2022 at 17:44:58 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -457,8 +457,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.8.0</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 36.21 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="rerun">0 rerun</span>
+    <p>1 tests ran in 53.37 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="rerun">0 rerun</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -469,15 +469,20 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">TestCase_scope/test_Scope_system.py::Test_scope::test_scope_system</td>
-          <td class="col-duration">35.73</td>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestCase_scope/test_Scope_base.py::Test_scope::test_scope_base</td>
+          <td class="col-duration">53.27</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;LDW_Automate_POM.TestCase_scope.test_Scope_system.Test_scope object at 0x0000019AB2CD3DC0&gt;<br/><br/>    def test_scope_system(self):<br/>        # 实例化登陆<br/>        loginin_LDW_new = login_LDW_new(self.driver, self.LDW_new_url)<br/>        loginin_LDW_new.login_ldw_new(self.LDW_new_name, self.LDW_new_psw)<br/>        #进入权限界面<br/>        login_scope=Scope_login(self.driver,self.LDW_new_url)<br/>        login_scope.scope_login()<br/>&gt;       login_scope.scope_exit()<br/><br/>test_Scope_system.py:29: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\pages\element_scope_login.py:42: in scope_exit<br/>    self.click(self.Confirm_exit)   #点击退出登陆按钮<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;LDW_Automate_POM.pages.element_scope_login.Scope_login object at 0x0000019AB28A93A0&gt;<br/>elem = (&#x27;xpath&#x27;, &#x27;/html/body/div/div/div[1]/div[2]/div/ul/li[2]/i&#x27;)<br/><br/>    def click(self,elem):<br/>&gt;       self.Find_element(elem).click()<br/><span class="error">E       AttributeError: &#x27;NoneType&#x27; object has no attribute &#x27;click&#x27;</span><br/><br/>..\pages\base.py:51: AttributeError<br/> ------------------------------Captured stdout call------------------------------ <br/>登陆成功
-角色权限界面打开成功
-获取元素失败
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>登陆成功
+当前登陆账户名为：ceshi123
+创建成功
+角色已绑定过
+创建成功
+角色都有:权限测试角色
+角色权限唯一性添加成功
+角色全选成功
 <br/></div></td></tr></tbody></table></body></html>

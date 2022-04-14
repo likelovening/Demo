@@ -39,7 +39,7 @@ class Base_pages(object):
         #return self.driver.find_element(*elem)
         try:
             #设置等待元素出现
-            return WebDriverWait(self.driver,10).until(EC.presence_of_element_located(elem))
+            return WebDriverWait(self.driver,20).until(EC.presence_of_element_located(elem))
         except :
             print("获取元素失败")
     #校验专用元素查询
@@ -49,8 +49,15 @@ class Base_pages(object):
     #输入框进行输入
     def input_send_keys(self,elem,text):
         try:
-            self.Find_element(elem).clear()
+            self.Find_elements(elem).clear()
+            time.sleep(1)
+            self.Find_elements(elem).send_keys(text)
+        except:
             self.Find_element(elem).send_keys(text)
+    def input(self,elem,text):
+        try:
+            self.Find_element(elem).clear()
+            self.driver.execute_script('document.getElementByXpath(elem).value=text')
         except:
             self.Find_element(elem).send_keys(text)
 
@@ -100,7 +107,8 @@ class Base_pages(object):
     def isloginsuccess(self,elem):
         flag=True
         try:
-            self.driver.find_element(elem)
+            WebDriverWait(self.driver,20).until(EC.presence_of_element_located(elem))
+            time.sleep(3)
             print("登陆成功")
             return flag
         except:
@@ -109,7 +117,7 @@ class Base_pages(object):
             return flag
     #判断元素是否创建成功
     def mkdir_success(self,elem):
-        if self.driver.find_element(elem):
+        if WebDriverWait(self.driver,20).until(EC.presence_of_element_located(elem)):
             print("创建成功")
         else:
             print("创建失败")
@@ -126,9 +134,6 @@ class Base_pages(object):
             print(self.driver.find_element_by_xpath(elem).text)
         else:
             return True
-
-
-
     #获取EOMS验证码输入并点击登陆
     def get_logincode(self,input_elem,login_elem,success_elem):
         path = 'D://taoler/pic'
