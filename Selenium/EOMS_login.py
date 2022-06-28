@@ -10,7 +10,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import sys
 driver = webdriver.Chrome()
-driver.implicitly_wait(30)  # 隐性等待时间为30秒
+driver.implicitly_wait(15)  # 隐性等待时间为30秒
 driver.maximize_window()
 base_url = "http://test.eoms.liangdawang.com:8087/eoms/page/portalManage/login.jsp"
 driver.get(base_url)
